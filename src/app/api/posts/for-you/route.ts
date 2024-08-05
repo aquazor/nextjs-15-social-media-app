@@ -5,6 +5,8 @@ import { NextRequest } from 'next/server';
 
 export async function GET(req: NextRequest) {
   try {
+    // await new Promise((res) => setTimeout(res, 5000));
+
     const cursor = req.nextUrl.searchParams.get('cursor') || undefined;
 
     const pageSize = 10;
